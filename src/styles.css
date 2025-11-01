@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Dark Section */
+.dark-section {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-indicator {
+    width: 60px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.header-right {
+    display: flex;
+    gap: 40px;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+
+.header-right a:hover {
+    opacity: 0.7;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 180px;
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.description-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 60px;
+    max-width: 1200px;
+}
+
+.desc-left,
+.desc-right {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.cta-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Light Section */
+.light-section {
+    background-color: #f5f3f0;
+    min-height: 100vh;
+    position: relative;
+    padding: 100px 60px;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px);
+}
+
+.light-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #f5f3f0;
+    border-radius: 0 0 200px 0;
+    z-index: 1;
+}
+
+.profile-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    z-index: 2;
+}
+
+.profile-photo {
+    width: 500px;
+    height: auto;
+    position: relative;
+    z-index: 3;
+    filter: grayscale(100%);
+    object-fit: contain;
+}
+
+/* Skill Tags */
+.skill-tag {
+    position: absolute;
+    padding: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    z-index: 4;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.skill-tag h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.skill-tag p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Design Strategy - Teal Blue Circle */
+.design-strategy {
+    background: linear-gradient(135deg, #00b4d8, #0096c7);
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    top: 10%;
+    left: 5%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.tag-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.icon-circle {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.design-strategy .tag-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.design-strategy .tag-content p {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* E-Comm - Bright Yellow Rectangle */
+.ecomm {
+    background: #ffd60a;
+    color: #000;
+    border-radius: 8px;
+    width: 220px;
+    bottom: 35%;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ecomm .tag-header {
+    margin-bottom: 5px;
+}
+
+.icon-star {
+    font-size: 18px;
+    color: #000;
+}
+
+.ecomm .tag-content h3 {
+    font-size: 16px;
+    color: #000;
+}
+
+.ecomm .tag-content p {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.icon-square {
+    width: 24px;
+    height: 24px;
+    background: #000;
+    color: #ffd60a;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Motion - Orange Rectangle */
+.motion {
+    background: #ff6b35;
+    color: #fff;
+    border-radius: 8px;
+    width: 240px;
+    bottom: 20%;
+    left: 10%;
+    padding: 25px;
+}
+
+/* UX Design - Hot Pink Rectangle */
+.ux-design {
+    background: #ff006e;
+    color: #fff;
+    border-radius: 8px;
+    width: 260px;
+    top: 15%;
+    right: 25%;
+    padding: 25px;
+}
+
+/* Branding - Teal Green Rectangle */
+.branding {
+    background: #06ffa5;
+    color: #fff;
+    border-radius: 8px;
+    width: 240px;
+    top: 5%;
+    right: 10%;
+    padding: 25px;
+}
+
+.branding .tag-header {
+    margin-bottom: 10px;
+}
+
+.icon-star-white {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Usability - Lime Green Circle */
+.usability {
+    background: #b5e48c;
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    bottom: 25%;
+    right: 15%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.tag-content-circle {
+    position: relative;
+}
+
+.usability h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.icon-globe {
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main-title {
+        font-size: 120px;
+    }
+    
+    .description-columns {
+        gap: 50px;
+    }
+    
+    .profile-photo {
+        width: 400px;
+    }
+    
+    .skill-tag {
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 768px) {
+    .dark-section {
+        padding: 30px 30px;
+    }
+    
+    .main-title {
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
+    
+    .description-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .header-right {
+        gap: 20px;
+    }
+    
+    .profile-photo {
+        width: 300px;
+    }
+    
+    .skill-tag {
+        transform: scale(0.6);
+    }
+    
+    .light-section {
+        padding: 60px 30px;
+    }
+}
+

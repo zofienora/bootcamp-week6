@@ -1,17 +1,27 @@
-# Portfolio Website
+# Portfolio Website - React App
 
-A modern, bold portfolio website for a Product Designer, featuring a dark hero section and a light section with skill tags.
+A modern, bold portfolio website built with React, featuring a dark hero section and a light section with skill tags.
 
 ## Features
 
+- **React Components**: Modular, reusable component structure
 - **Modern Design**: Dark/light contrast with bold typography
 - **Responsive Layout**: Works on desktop, tablet, and mobile devices
 - **Interactive Elements**: Hover effects and smooth transitions
 - **Skill Tags**: Colorful, sticker-like design elements showcasing skills
+- **Fast Development**: Powered by Vite for instant HMR (Hot Module Replacement)
 
 ## Setup Instructions
 
-### 1. Remove Background from Profile Photo
+### 1. Install Dependencies
+
+First, install Node.js dependencies:
+
+```bash
+npm install
+```
+
+### 2. Remove Background from Profile Photo
 
 To remove the background from your profile photo:
 
@@ -20,7 +30,7 @@ To remove the background from your profile photo:
    pip install -r requirements.txt
    ```
 
-2. **Place your profile photo** in the project directory (e.g., `profile-photo.jpg`)
+2. **Place your profile photo** in the project root (e.g., `profile-photo.jpg`)
 
 3. **Run the background removal script:**
    ```bash
@@ -29,54 +39,88 @@ To remove the background from your profile photo:
 
    Replace `profile-photo.jpg` with your actual photo filename. The script will create a PNG file with transparent background.
 
-4. **Verify the output:** Make sure `profile-photo-no-bg.png` exists and looks good.
+4. **Move the processed photo to the public folder:**
+   ```bash
+   mv profile-photo-no-bg.png public/
+   ```
 
-### 2. View the Website
+### 3. Run the Development Server
 
-Simply open `index.html` in your web browser, or use a local server:
+Start the development server:
 
 ```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js (if you have http-server installed)
-npx http-server
+npm run dev
 ```
 
-Then open `http://localhost:8000` in your browser.
+The app will be available at `http://localhost:5173` (or the next available port).
+
+### 4. Build for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` folder. You can preview the production build with:
+
+```bash
+npm run preview
+```
 
 ## File Structure
 
 ```
 bootcamp-week6/
-├── index.html              # Main HTML file
-├── styles.css              # All CSS styles
-├── script.js               # JavaScript (if needed)
-├── remove_background.py    # Background removal script
-├── requirements.txt        # Python dependencies
-├── profile-photo.jpg       # Your original photo (add this)
-└── profile-photo-no-bg.png # Photo with removed background (generated)
+├── public/
+│   └── profile-photo-no-bg.png  # Your profile photo (add this)
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx           # Header component with navigation
+│   │   ├── Hero.jsx             # Hero section with title and CTA
+│   │   ├── ProfileSection.jsx   # Profile section with photo and skills
+│   │   └── SkillTag.jsx         # Reusable skill tag component
+│   ├── App.jsx                  # Main app component
+│   ├── main.jsx                 # React entry point
+│   └── styles.css               # All CSS styles
+├── index.html                   # HTML template
+├── package.json                 # Node.js dependencies
+├── vite.config.js              # Vite configuration
+├── remove_background.py        # Background removal script
+└── requirements.txt            # Python dependencies
 ```
 
 ## Customization
 
 ### Update Personal Information
 
-Edit `index.html` to update:
+Edit `src/components/Header.jsx` to update:
 - Name (currently "Devanta Ebison")
+
+Edit `src/components/Hero.jsx` to update:
 - Title (currently "PRODUCT DESIGNER")
 - Description text
-- Navigation links
+- CTA button text
+
+Edit `src/components/ProfileSection.jsx` to update:
+- Skill tags data (in the `skills` array)
 
 ### Modify Colors
 
-Edit `styles.css` to change:
+Edit `src/styles.css` to change:
 - Skill tag colors (`.design-strategy`, `.ecomm`, `.motion`, etc.)
 - Background colors (`.dark-section`, `.light-section`)
 
 ### Adjust Skill Tags
 
-Modify the skill tags in `index.html` and their styles in `styles.css` to match your skills.
+Modify the `skills` array in `src/components/ProfileSection.jsx` to add, remove, or edit skill tags. Each skill object can have:
+- `id`: Unique identifier
+- `type`: CSS class name (matches existing styles)
+- `title`: Main title text
+- `subtitle`: Optional subtitle text
+- `icons`: Array of icon types (`'circle'`, `'star'`, `'star-white'`)
+- `extraIcon`: Additional icon text (like `'e'` for the ecomm tag)
+- `icon`: Special icon type (like `'globe'` for usability)
 
 ## Browser Support
 
