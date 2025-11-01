@@ -4,42 +4,42 @@ import SkillTag from './SkillTag'
 function ProfileSection() {
   const skills = [
     {
-      id: 'design-strategy',
+      id: 'frontend-dev',
       type: 'design-strategy',
-      title: 'DESIGN STRATEGY',
-      subtitle: 'ALIGNING YOUR → BUSINESS & USER NEEDS',
+      title: 'FRONTEND DEVELOPMENT',
+      subtitle: 'BUILDING → MODERN WEB EXPERIENCES',
       icons: ['circle', 'circle'],
     },
     {
-      id: 'ecomm',
+      id: 'ui-ux',
       type: 'ecomm',
-      title: 'E-COMM. WWW.',
-      subtitle: 'EXPERIENCES',
+      title: 'UI/UX DESIGN',
+      subtitle: 'USER-FRIENDLY INTERFACES',
       icons: ['star'],
-      extraIcon: 'e',
+      extraIcon: '<>',
     },
     {
-      id: 'motion',
+      id: 'collaboration',
       type: 'motion',
-      title: 'MOTION & INTERACTION',
-      subtitle: '→ DESIGN',
+      title: 'COLLABORATION',
+      subtitle: '→ BUILDING TOGETHER',
     },
     {
-      id: 'ux-design',
+      id: 'continuous-learning',
       type: 'ux-design',
-      title: 'USER EXPER-IENCE DESIGN©',
+      title: 'CONTINUOUS LEARNING©',
     },
     {
-      id: 'branding',
+      id: 'problem-solving',
       type: 'branding',
-      title: 'BRANDING & IDENTITY',
-      subtitle: "©'22",
+      title: 'PROBLEM SOLVING',
+      subtitle: "2024",
       icons: ['star-white'],
     },
     {
-      id: 'usability',
+      id: 'creative-mindset',
       type: 'usability',
-      title: 'USABILITY TESTING',
+      title: 'CREATIVE MINDSET',
       icon: 'globe',
     },
   ]
@@ -48,11 +48,11 @@ function ProfileSection() {
     <section className="light-section" id="about">
       <div className="profile-container">
         <img 
-          src="/profile-photo-no-bg.png" 
-          alt="Devanta Ebison" 
+          src="/photo.jpg" 
+          alt="Nori" 
           className="profile-photo"
           onError={(e) => {
-            console.warn('Profile photo not found. Please ensure profile-photo-no-bg.png exists in the public folder.')
+            console.warn('Profile photo not found. Please ensure photo.jpg exists in the public folder.')
             e.target.style.display = 'none'
           }}
         />

@@ -7,16 +7,22 @@
 body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    background-color: #000;
+}
+
+.app-container {
+    background-color: #000;
 }
 
 /* Dark Section */
 .dark-section {
     background-color: #000;
-    color: #fff;
+    color: #F5F5DC;
     min-height: 100vh;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 header {
@@ -35,7 +41,7 @@ header {
 .header-indicator {
     width: 60px;
     height: 8px;
-    background-color: #fff;
+    background-color: #F5F5DC;
 }
 
 .name {
@@ -51,7 +57,7 @@ header {
 }
 
 .header-right a {
-    color: #fff;
+    color: #F5F5DC;
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
@@ -66,10 +72,12 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .main-title {
@@ -79,7 +87,7 @@ header {
     line-height: 0.9;
     text-transform: uppercase;
     margin-bottom: 60px;
-    text-align: center;
+    color: #F5F5DC;
 }
 
 .description-columns {
@@ -95,51 +103,60 @@ header {
     font-size: 18px;
     line-height: 1.6;
     font-weight: 400;
+    color: #F5F5DC;
+}
+
+.desc-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cta-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
 .cta-button {
-    color: #fff;
-    text-decoration: none;
+    color: #F5F5DC;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
     font-size: 16px;
     font-weight: 500;
-    padding: 15px 30px;
-    border: 2px solid #fff;
-    transition: all 0.3s;
+    padding: 15px 0;
+    border: none;
+    transition: opacity 0.3s;
     display: inline-block;
+    background: transparent;
 }
 
 .cta-button:hover {
-    background-color: #fff;
-    color: #000;
+    opacity: 0.7;
 }
 
-/* Light Section */
+/* Light Section with Grid Background */
 .light-section {
-    background-color: #f5f3f0;
+    background-color: #000;
     min-height: 100vh;
     position: relative;
-    padding: 100px 60px;
-    background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px),
-        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px);
+    padding: 0;
+    overflow: hidden;
 }
 
 .light-section::before {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 150px;
-    background: #f5f3f0;
-    border-radius: 0 0 200px 0;
+    height: 60%;
+    background: #F5F5DC;
+    border-radius: 200px 0 0 0;
     z-index: 1;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(0,0,0,0.08) 40px, rgba(0,0,0,0.08) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.08) 40px, rgba(0,0,0,0.08) 41px);
 }
 
 .profile-container {
@@ -147,10 +164,11 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     min-height: 80vh;
     z-index: 2;
+    padding: 100px 60px;
 }
 
 .profile-photo {
@@ -160,6 +178,7 @@ header {
     z-index: 3;
     filter: grayscale(100%);
     object-fit: contain;
+    margin-right: 60px;
 }
 
 /* Skill Tags */
@@ -187,15 +206,15 @@ header {
     line-height: 1.4;
 }
 
-/* Design Strategy - Teal Blue Circle */
+/* Design Strategy - Teal/Cyan Circle */
 .design-strategy {
-    background: linear-gradient(135deg, #00b4d8, #0096c7);
+    background: #00BCD4;
     border-radius: 50%;
     width: 280px;
     height: 280px;
     top: 10%;
     left: 5%;
-    color: #fff;
+    color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,16 +239,22 @@ header {
 .design-strategy .tag-content h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: #000;
 }
 
 .design-strategy .tag-content p {
     font-size: 11px;
     font-weight: 400;
+    color: #000;
+}
+
+.design-strategy .icon-circle {
+    background: #000;
 }
 
 /* E-Comm - Bright Yellow Rectangle */
 .ecomm {
-    background: #ffd60a;
+    background: #FFEB3B;
     color: #000;
     border-radius: 8px;
     width: 220px;
@@ -276,8 +301,8 @@ header {
 
 /* Motion - Orange Rectangle */
 .motion {
-    background: #ff6b35;
-    color: #fff;
+    background: #FF9800;
+    color: #000;
     border-radius: 8px;
     width: 240px;
     bottom: 20%;
@@ -285,26 +310,40 @@ header {
     padding: 25px;
 }
 
+.motion h3, .motion p {
+    color: #000;
+}
+
 /* UX Design - Hot Pink Rectangle */
 .ux-design {
-    background: #ff006e;
-    color: #fff;
+    background: #E91E63;
+    color: #000;
     border-radius: 8px;
     width: 260px;
     top: 15%;
     right: 25%;
     padding: 25px;
+    transform: rotate(2deg);
 }
 
-/* Branding - Teal Green Rectangle */
+.ux-design h3, .ux-design p {
+    color: #000;
+}
+
+/* Branding - Light Blue/Teal Rectangle */
 .branding {
-    background: #06ffa5;
-    color: #fff;
+    background: #4DD0E1;
+    color: #000;
     border-radius: 8px;
     width: 240px;
     top: 5%;
     right: 10%;
     padding: 25px;
+    transform: rotate(-2deg);
+}
+
+.branding h3, .branding p {
+    color: #000;
 }
 
 .branding .tag-header {
@@ -313,12 +352,12 @@ header {
 
 .icon-star-white {
     font-size: 18px;
-    color: #fff;
+    color: #000;
 }
 
 /* Usability - Lime Green Circle */
 .usability {
-    background: #b5e48c;
+    background: #8BC34A;
     border-radius: 50%;
     width: 260px;
     height: 260px;
@@ -330,6 +369,7 @@ header {
     justify-content: center;
     padding: 40px;
     text-align: center;
+    transform: rotate(-3deg);
 }
 
 .tag-content-circle {

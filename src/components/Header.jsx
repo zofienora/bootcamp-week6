@@ -13,7 +13,7 @@ function Header() {
     <header>
       <div className="header-left">
         <div className="header-indicator"></div>
-        <h1 className="name">Devanta<br />Ebison</h1>
+        <h1 className="name">Nori</h1>
       </div>
       <nav className="header-right">
         <a href="#work" onClick={(e) => handleNavClick(e, '#work')}>Work</a>

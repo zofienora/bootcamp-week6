@@ -5,13 +5,13 @@ import ProfileSection from './components/ProfileSection'
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <section className="dark-section">
         <Header />
         <Hero />
       </section>
       <ProfileSection />
-    </>
+    </div>
   )
 }
 
