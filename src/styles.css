@@ -6,31 +6,36 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #000;
+    height: 100vh;
 }
 
 .app-container {
     background-color: #000;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Dark Section */
 .dark-section {
     background-color: #000;
     color: #F5F5DC;
-    min-height: 60vh;
+    height: 40vh;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .header-left {
@@ -79,30 +84,31 @@ header {
     width: 100%;
     position: relative;
     z-index: 1;
+    height: 100%;
 }
 
 .main-title {
-    font-size: 180px;
+    font-size: 120px;
     font-weight: 900;
     letter-spacing: -5px;
     line-height: 0.9;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     color: #F5F5DC;
 }
 
 .description-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin-bottom: 60px;
+    gap: 60px;
+    margin-bottom: 0;
     max-width: 1200px;
 }
 
 .desc-left,
 .desc-right {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.5;
     font-weight: 400;
     color: #F5F5DC;
 }
@@ -139,7 +145,7 @@ header {
 /* Light Section with Grid Background */
 .light-section {
     background-color: #000;
-    min-height: 100vh;
+    height: 60vh;
     position: relative;
     padding: 0;
     overflow: hidden;
@@ -151,7 +157,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60%;
+    height: 100%;
     background: #F5F5DC;
     border-radius: 200px 0 0 0;
     z-index: 1;
@@ -167,13 +173,13 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    min-height: 80vh;
+    height: 100%;
     z-index: 2;
-    padding: 100px 60px;
+    padding: 40px 60px;
 }
 
 .profile-photo {
-    width: 500px;
+    width: 400px;
     height: auto;
     position: relative;
     z-index: 3;
@@ -232,7 +238,7 @@ header {
 .icon-circle {
     width: 12px;
     height: 12px;
-    background: #fff;
+    background: #000;
     border-radius: 50%;
 }
 
@@ -246,10 +252,6 @@ header {
     font-size: 11px;
     font-weight: 400;
     color: #000;
-}
-
-.design-strategy .icon-circle {
-    background: #000;
 }
 
 /* E-Comm - Bright Yellow Rectangle */
