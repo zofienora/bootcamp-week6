@@ -171,7 +171,7 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 100%;
     z-index: 2;
@@ -184,7 +184,6 @@ header {
     position: relative;
     z-index: 3;
     object-fit: contain;
-    margin-right: 60px;
 }
 
 /* Skill Tags */
@@ -218,8 +217,8 @@ header {
     border-radius: 50%;
     width: 280px;
     height: 280px;
-    top: 10%;
-    left: 5%;
+    top: 5%;
+    left: 15%;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -260,8 +259,8 @@ header {
     color: #000;
     border-radius: 8px;
     width: 220px;
-    bottom: 35%;
-    left: 8%;
+    bottom: 45%;
+    left: 12%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -311,8 +310,8 @@ header {
     color: #000;
     border-radius: 8px;
     width: 240px;
-    bottom: 20%;
-    left: 10%;
+    bottom: 30%;
+    left: 15%;
     padding: 25px;
 }
 
@@ -326,8 +325,8 @@ header {
     color: #000;
     border-radius: 8px;
     width: 260px;
-    top: 15%;
-    right: 25%;
+    top: 10%;
+    right: 15%;
     padding: 25px;
     transform: rotate(2deg);
 }
@@ -342,8 +341,8 @@ header {
     color: #000;
     border-radius: 8px;
     width: 240px;
-    top: 5%;
-    right: 10%;
+    top: 0%;
+    right: 20%;
     padding: 25px;
     transform: rotate(-2deg);
 }
@@ -367,8 +366,8 @@ header {
     border-radius: 50%;
     width: 260px;
     height: 260px;
-    bottom: 25%;
-    right: 15%;
+    bottom: 35%;
+    right: 12%;
     color: #000;
     display: flex;
     align-items: center;
