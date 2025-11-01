@@ -18,11 +18,12 @@ body {
 .dark-section {
     background-color: #000;
     color: #F5F5DC;
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 80px;
 }
 
 header {
@@ -176,7 +177,6 @@ header {
     height: auto;
     position: relative;
     z-index: 3;
-    filter: grayscale(100%);
     object-fit: contain;
     margin-right: 60px;
 }
@@ -285,6 +285,10 @@ header {
     font-weight: 700;
 }
 
+.ecomm .icon-star {
+    color: #000;
+}
+
 .icon-square {
     width: 24px;
     height: 24px;
@@ -382,9 +386,14 @@ header {
     margin-bottom: 15px;
 }
 
+.usability .tag-content-circle {
+    color: #000;
+}
+
 .icon-globe {
     font-size: 32px;
     margin-top: 15px;
+    color: #000;
 }
 
 /* Responsive Design */
@@ -399,6 +408,7 @@ header {
     
     .profile-photo {
         width: 400px;
+        margin-right: 40px;
     }
     
     .skill-tag {
